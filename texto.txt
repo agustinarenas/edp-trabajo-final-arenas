@@ -1,0 +1,24 @@
+Trabajo final de entorno:
+
+statsWords:
+Indicador estadístico de longitud de palabras.
+
+statsUsageWords:
+Indicador estadístico de uso de palabras, deben ser de al menos 4 letras.
+
+findNames:
+Identificación de nombres propios.
+
+statsSentences:
+Indicador estadístico de longitud de oraciones.
+
+blankLinesCounter:
+Contador de líneas en blanco.
+
+Objetivos:
+
+El trabajo consiste en generar un contenedor que al ejecutarse presente un menú de opciones de filtrados de un texto dado. Deberán editar un Dockerfile y construir una imagen.
+El texto a analizar debe ser depositado en un directorio del equipo host y copiar el contenido del mismo al contenedor para que lo tenga disponible para su posterior análisis.
+Tanto los scripts, como el Dockerfile y el archivo de texto de entrada, deben estar en el repositorio gitlab o github que creen para realizar el desarrollo en equipo.
+Recomendamos trabajar en el repositorio manteniendo la prolijidad y las buenas prácticas de git. Una estrategia recomendable es realizar un branch por cada ejercicio e ir integrando a la rama principal a medida que los scripts que resuelven cada ejercicio estén listos.
+En ese mismo repositorio debe estar la documentación suficiente para comprender cómo desplegar el contenedor y ejecutar la aplicación, con algunas capturas de ejecución o lo que consideren logre explicitar el funcionamiento y visualizar resultados. Puede ser utilizando un archivo README.md el cual estará presente cuando se accede al repositorio en gitlab o github.
