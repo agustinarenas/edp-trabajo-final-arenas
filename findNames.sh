@@ -4,7 +4,7 @@
 
 f=$(cat $1)
 regex="^[A-Z][a-z]*$"
-echo "Las palabras con mayuscula en el archivo son:"
+echo "Las palabras que inician con mayuscula en el archivo son:"
 for i in $f
 do
 	c_esp=${i: -1}
