@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[[ ! -e $1  || $# -ne 1 ]] && echo "El archivo no existe o no ingreso un argumento" && exit 1
+echo "Las diez palabras mas repetidas son: "
 f=$(cat $1)
 for i in $f
 do
