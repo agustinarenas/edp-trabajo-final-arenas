@@ -1,5 +1,7 @@
 #!/bin/bash
-rm filetemporal.txt
+
+[[ ! -e $1  || $# -ne 1 ]] && echo "El archivo no existe o no ingreso un argumento" && exit 1
+
 f=$(cat $1)
 line=0
 
@@ -48,7 +50,7 @@ done
 
 prom=$(echo "scale=1; $long/$cant_l" | bc)
 echo "La oracion mas larga tiene $o_l caracteres. La oracion es: $oracion_l"
-echo "La palabra mas corta tiene $o_c caracteres. La oracion es: $oracion_c"
+echo "La oracion mas corta tiene $o_c caracteres. La oracion es: $oracion_c"
 echo "El promedio de longitud de oracion es $prom"
-
+rm filetemporal.txt
 exit 0
