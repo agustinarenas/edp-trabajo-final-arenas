@@ -30,5 +30,6 @@ prom=$(echo "scale=1; $long/$count" | bc)
 echo "La palabra mas larga tiene $p_l caracteres. La palabra es: $palabra_l"
 echo "La palabra mas corta tiene $p_c caracteres. La palabra es: $palabra_c"
 echo "El promedio de longitud de palabras es $prom"
+
 exit 0
 
