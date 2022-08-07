@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+[[ ! -e $1  || $# -ne 1 ]] && echo "El archivo no existe o no ingreso un argumento" && exit 1
+
 f=$(cat $1)
 count=0
 p_l=0
