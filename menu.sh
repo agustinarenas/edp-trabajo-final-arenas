@@ -12,7 +12,7 @@ do
 	[ -e $opcion ] && echo "Elegir una opcion valida!" && continue
 	[ $REPLY -eq 6 ] && echo "Hasta luego" && break
 	echo "######################## $opcion ########################"
-	[ $REPLY -eq 1 ] && echo . statsWords.sh $arch
+	[ $REPLY -eq 1 ] && . statsWords.sh $arch
 	[ $REPLY -eq 2 ] && . statsUsageWords.sh $arch
 	[ $REPLY -eq 3 ] && . findNames.sh $arch
 	[ $REPLY -eq 4 ] && . statsSentences.sh $arch

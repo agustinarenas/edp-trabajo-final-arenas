@@ -15,4 +15,4 @@ c_lb=$((l_t-l_sb))
 
 echo "La cantidad de lineas en blanco que posee el archivo es: $c_lb"
 
-exit 0
+#exit 0

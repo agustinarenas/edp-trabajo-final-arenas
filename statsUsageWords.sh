@@ -20,4 +20,4 @@ do
 done
 cat filetemporal.txt | sort | uniq -c | sort -n -r | head -n 10
 rm filetemporal.txt
-exit 0
+#exit 0

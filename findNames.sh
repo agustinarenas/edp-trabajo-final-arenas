@@ -21,4 +21,4 @@ done
 cat filetemporal.txt | sort | uniq
 rm filetemporal.txt
 
-exit 0
+#exit 0

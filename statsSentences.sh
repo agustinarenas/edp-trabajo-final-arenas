@@ -53,4 +53,4 @@ echo "La oracion mas larga tiene $o_l caracteres. La oracion es: $oracion_l"
 echo "La oracion mas corta tiene $o_c caracteres. La oracion es: $oracion_c"
 echo "El promedio de longitud de oracion es $prom"
 rm filetemporal.txt
-exit 0
+#exit 0
