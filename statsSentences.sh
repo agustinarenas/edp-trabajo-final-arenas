@@ -1,11 +1,8 @@
 #!/bin/bash
 rm filetemporal.txt
 f=$(cat $1)
-count=0
-p_l=0
-p_c=1000
-long=0
 line=0
+
 for i in $f
 do
 	c_esp=${i: -1}
@@ -13,13 +10,10 @@ do
 		'.' | ':')
 			if [ $line -eq 1 ]; then
         	        	echo $i >> filetemporal.txt
-	                        count=$((count+1))
-
 			else
 				orac=$(echo $orac $i)
                                 echo $orac >> filetemporal.txt
 				line=1
-				count=$((count+1))
 				orac=""
 			fi
 		;;
@@ -27,21 +21,34 @@ do
 			orac=$(echo $orac $i)
 			line=0
 	esac
-	#n_carac=${#i}
-	#long=$((n_carac+long))
-	#if [ $n_carac -gt $p_l ]; then
-		#p_l=$n_carac
-		#palabra_l=$i
-	#fi
-        #if [ $n_carac -lt $p_c ]; then
-         #       p_c=$n_carac
-          #      palabra_c=$i
-        #fi
-	#echo $i
 done
-#prom=$(echo "scale=1; $long/$count" | bc)
-#echo "La palabra mas larga tiene $p_l caracteres. La palabra es: $palabra_l"
-#echo "La palabra mas corta tiene $p_c caracteres. La palabra es: $palabra_c"
-#echo "El promedio de longitud de palabras es $prom"
+
+cant_l=$(cat filetemporal.txt | wc -l)
+
+o_l=0
+o_c=10000
+long=0
+line=0
+
+for i in $(seq 1 $cant_l)
+do
+	orac=$(cat filetemporal.txt | head -$i | tail -1)
+        n_carac=${#orac}
+	#echo $n_carac
+        long=$((n_carac+long))
+        if [ $n_carac -gt $o_l ]; then
+                o_l=$n_carac
+                oracion_l=$orac
+        fi
+        if [ $n_carac -lt $o_c ]; then
+                o_c=$n_carac
+                oracion_c=$orac
+        fi
+done
+
+prom=$(echo "scale=1; $long/$cant_l" | bc)
+echo "La oracion mas larga tiene $o_l caracteres. La oracion es: $oracion_l"
+echo "La palabra mas corta tiene $o_c caracteres. La oracion es: $oracion_c"
+echo "El promedio de longitud de oracion es $prom"
 
 exit 0
