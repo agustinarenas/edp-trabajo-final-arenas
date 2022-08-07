@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-f=$(head $1)
+f=$(cat $1)
 count=0
 p_l=0
 p_c=1000
