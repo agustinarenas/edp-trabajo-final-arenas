@@ -48,7 +48,7 @@ do
         fi
 done
 
-prom=$(echo "scale=1; $long/$cant_l" | bc)
+prom=$((long/cant_l))
 echo "La oracion mas larga tiene $o_l caracteres. La oracion es: $oracion_l"
 echo "La oracion mas corta tiene $o_c caracteres. La oracion es: $oracion_c"
 echo "El promedio de longitud de oracion es $prom"
