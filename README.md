@@ -27,17 +27,18 @@ CONSTRUCCIÓN DE LA IMAGEN:
 
 Instalar Docker desde la pagina oficial siguiendo las instrucciones de la pagina para una correcta instalación.
 
-Con el Dockerfile del repositorio se construye la imagen edp:v1.0.0, mediante la ejecución del siguiente comando:
+Con el Dockerfile del repositorio se construye la imagen edp:v1.0.0, mediante la ejecución del siguiente comando (Leer el texto siguiente del comando:
 
 ```
 
 $ docker build --tag edp:v1.0.0 .
 
 ```
-Antes descargar el Dockerfile en el directorio donde se va a correr el contenedor. Para incorporar un archivo de texto editar el Dockerfile, agregando un ADD debajo del ultimo ADD que hay en el archivo de la siguiente forma:(Para editar el Dockerfile en el directorio abrir una terminal en el directorio e ingresar el comando nano Dockerfile):
+Antes descargar el Dockerfile en el directorio donde se va a correr el contenedor. Para incorporar un archivo de texto, se debe editar el Dockerfile, agregando un ADD debajo del ultimo ADD que hay en el archivo de la siguiente forma:(Para editar el Dockerfile en el directorio abrir una terminal en el directorio e ingresar el comando nano Dockerfile):
 
-ADD ["archivodetexto.txt" ,"/root/"]
+ADD ["texto.txt" ,"/root/"]
 
+Por defecto ya viene con un archivo incorporado texto.txt (Disponible en el repositorio para descargar), de no trabajar con ese archivo reemplazar su nombre con el que si va a trabajar.
 Luego para correr el contenedor con la imagen creada ejecutar el siguiente comando:
 ```
 
