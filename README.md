@@ -48,12 +48,19 @@ Tener en cuenta que la ejecución de este ultimo comando activa la aplicación d
 
 ## 2_Ejecución de la aplicación:
 
-Ejecutado el comando anteriormente dicho, la aplicación solicita ingresar el nombre del archivo (Ej: texto.txt.txt)
+Ejecutado el comando anteriormente dicho, la aplicación solicita ingresar el nombre del archivo (Ej: texto.txt.txt):
 
+![image info](./cap_1.png)
 
+Luego muestra el menu de opciones:
 
+![image info](./cap_2.png)
 
+El resultado de la opción elegida y la opcion de salir al final:
 
+![image info](./cap_3.png)
+
+Fin.
 
 
 
